@@ -1,7 +1,8 @@
 const axios = require('axios');
+require('dotenv-safe').config();
 
 const api = axios.create({
-  baseURL: 'https://stooq.com'
+  baseURL: process.env.STOCK_API
 });
 
 module.exports = api;
